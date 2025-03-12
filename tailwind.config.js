@@ -8,6 +8,10 @@ export default {
     extend: {
       fontFamily: {
         custom: ['"Ysabeau SC"', 'sans-serif'],
+          roboto: ["Roboto", "sans-serif"],
+          inter: ["Inter", "sans-serif"],
+          nunito: ["Nunito", "sans-serif"],
+
       },
     },
   },

@@ -1,43 +1,97 @@
-import React from "react";
-import img from '../assets/Image/IMG-20240319-WA0006.jpg'
-import linkedin from '../assets/Logo/icons8-linkedin-48.png'
-import facebook from '../assets/Logo/icons8-facebook-48.png'
-import github from '../assets/Logo/icons8-github-64.png'
-import twiter from '../assets/Logo/icons8-twitter-logo-96.png'
+import React, { useState } from "react";
+import img from "../assets/img.jpeg";
+import linkedin from "../assets/Logo/icons8-linkedin-48.png";
+import facebook from "../assets/Logo/icons8-facebook-48.png";
+import github from "../assets/Logo/icons8-github-64.png";
+import twiter from "../assets/Logo/icons8-twitter-logo-96.png";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitch } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
+import { motion } from "framer-motion";
+
 
 const HeroSec = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <section className="flex items-center justify-between sm:flex-row flex-col  py-16 w-11/12 mx-auto" >
-      <div className="text-[#ffffff] sm:w-[50%] space-y-5">
-        <h1 className="font-custom font-bold text-5xl mb-3">
-          Hi, I am <span>Obaed</span>
+    <section className="flex items-center justify-between sm:flex-row flex-col  py-16 w-11/12 mx-auto">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="text-[#ffffff] sm:w-[50%] space-y-5"
+      >
+        <h1 className="font-custom font-bold text-3xl md:text-6xl mb-3">
+          Hi, I am <span>Abu Obaed</span>
         </h1>
-        <h3 className="font-custom font-bold text-[#DA9310] text-5xl ">
-          <span>WEB DEVELOPER</span>
+        <h3 className="font-custom font-bold text-[#DA9310] text-xl md:text-2xl ">
+          <span>JUNIOR FRONTEND DEVELOPER</span>
         </h3>
         <p className="text-base my-2">
-         Developer by Passion, Designer at Heart
+          Developer by Passion, Designer at Heart
         </p>
         <div className="social-icons flex items-center justify-start gap-3 text-3xl text-[#4040d3] ">
-            <a href="#" className="h-[28px] w-[28px]" ><img src={facebook} alt="" /></a>
-            <a href="#" className="h-[28px] w-[28px]"><img src={linkedin} alt="" /></a>
-            <a href="#"><img src={twiter} alt="" className="h-[28px] w-[28px]" /></a>
-            <a href="#" className="text-[25px]"><FaGithub></FaGithub></a>
+          <a href="#" className="h-[28px] w-[28px]">
+            <img src={facebook} alt="" />
+          </a>
+          <a href="#" className="h-[28px] w-[28px]">
+            <img src={linkedin} alt="" />
+          </a>
+          <a href="#">
+            <img src={twiter} alt="" className="h-[28px] w-[28px]" />
+          </a>
+          <a href="#" className="text-[25px]">
+            <FaGithub></FaGithub>
+          </a>
         </div>
 
         <div className="mt-8">
-          <a href="#" className="px-3 py-2 text-xl font-semibold border border-[#DA9310] rounded-md  text-[#ffffff]  ">
+          <a
+            href="#"
+            className="px-3 py-2 text-xl font-semibold border border-[#DA9310] rounded-md  text-[#ffffff]  "
+          >
             Download Resume
           </a>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="home-image">
-         <img src={img} alt="Obaed Profile" className="  w-[250px] h-[280px] rounded-lg shadow-sm" />
-      </div>
+      {/* <motion.div
+         whileHover={{ scale: 1.1 }}
+         whileTap={{ scale: 0.9 }}
+         initial={{ opacity: 0, scale: 0.5 }}
+         animate={{ opacity: 1, scale: 1 }}
+         transition={{ duration: 0.5 }}
+         className="relative p-1 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"
+      >
+        <img
+          src={img}
+          alt="Obaed Profile"
+          className="  w-[400px] h-[400px] object-cover image-full rounded-full shadow-sm border-4 border-gray-900"
+        />
+      </motion.div> */}
+      <motion.div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="relative p-1 rounded-full"
+      >
+        {/* Gradient Shadow */}
+        <div
+          className={`absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 blur-lg transition-opacity duration-500 ${
+            isHovered ? "opacity-100" : "opacity-0"
+          }`}
+        />
+
+        {/* Profile Image */}
+        <img
+          src={img}
+          alt="Profile"
+          className="w-[400px] h-[400px] object-cover rounded-full shadow-lg border-4 border-gray-900 relative"
+        />
+      </motion.div>
     </section>
   );
 };
