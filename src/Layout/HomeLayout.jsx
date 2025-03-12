@@ -15,15 +15,15 @@ const HomeLayout = () => {
               <HeroSec></HeroSec>
            </div>
            {/* about me */}
-           <div className="w-10/12 mx-auto mt-12">
+           <div className="w-10/12 mx-auto mt-24">
                <About></About>
            </div>
            {/* skill*/}
-           <div className="w-10/12 mx-auto mt-12 pb-12">
+           <div className="w-10/12 mx-auto mt-24 pb-12">
               <Skill></Skill>
            </div>
            {/* educations */}
-           <div className="w-10/12 mx-auto mt-12 pb-12">
+           <div className="w-10/12 mx-auto mt-24 pb-12">
               <Educations></Educations>
            </div>
           

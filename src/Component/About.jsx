@@ -11,7 +11,7 @@ const About = () => {
       transition={{ duration: 0.5 }}
       className="mx-auto w-11/12 text-[#ffffff]"
     >
-      <div className="text-5xl font-bold text-center mb-6">About Me</div>
+      <div className="text-5xl font-bold text-center mb-16">About Me</div>
       <div className="mt-5 flex items-center justify-between sm:flex-row flex-col">
         <div className="sm:w-[45%]">
           <img
