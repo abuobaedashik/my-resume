@@ -12,7 +12,7 @@ const Educations = () => {
            initial={{ opacity: 0, scale: 0.5 }}
            animate={{ opacity: 1, scale: 1 }}
            transition={{ duration: 0.5 }}
-          className="mt-3 px-16 z-50 shadow-lg hover:shadow-[#CF951C] py-6 w-[600px] rounded-xl bg-[#111723c8] border border-[#ffffff]">
+          className="mt-3 px-16 z-10 shadow-lg hover:shadow-[#CF951C] py-6 w-[600px] rounded-xl bg-[#111723c8] border border-[#ffffff]">
             <div className="mt-3">
               <p className="text-4xl">Diploma in Engineering</p>
               <p className="text-xl">Govt. Graphics Arts Institute</p>
@@ -29,7 +29,7 @@ const Educations = () => {
                  initial={{ opacity: 0, scale: 0.5 }}
                  animate={{ opacity: 1, scale: 1 }}
                  transition={{ duration: 0.5 }}
-              className="mt-3 rounded-xl bg-[#111723c8] border z-50 shadow-lg hover:shadow-[#CF951C] border-[#ffffff] px-16 py-6 w-[600px]">
+              className="mt-3 rounded-xl bg-[#111723c8] border z-10 shadow-lg hover:shadow-[#CF951C] border-[#ffffff] px-16 py-6 w-[600px]">
              
                 <p className="text-4xl">Secondary School Certificate</p>
                 <p className="text-xl">Baniajan Di-mukhi High School</p>
