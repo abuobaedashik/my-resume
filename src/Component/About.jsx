@@ -30,7 +30,7 @@ const About = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="z-50 shadow-lg hover:shadow-[#CF951C] px-4 py-2 rounded-md">
+            <div className="z-50 text-xl shadow-lg hover:shadow-[#CF951C] px-4  py-2 rounded-md">
               Hi, I'm Abu Obaed, a frontend developer with a passion for
               creating visually stunning and user-friendly web experiences. I
               specialize in crafting responsive and dynamic designs using

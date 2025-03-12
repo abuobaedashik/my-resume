@@ -4,8 +4,8 @@ const Educations = () => {
   return (
     <div>
       <div className="mx-auto w-11/12 text-[#ffffff] font-custom">
-        <div className="text-5xl font-bold mb-4 text-center">Educations</div>
-        <div className="mt-5 flex items-center justify-between flex-col gap-4">
+        <div className="text-5xl font-bold mb-16 text-center">Educations</div>
+        <div className="mt-5 flex items-center justify-between  flex-col gap-6">
           <motion.div
            whileHover={{ scale: 1.1 }}
            whileTap={{ scale: 0.9 }}
@@ -16,10 +16,9 @@ const Educations = () => {
             <div className="mt-3">
               <p className="text-4xl">Diploma in Engineering</p>
               <p className="text-xl">Govt. Graphics Arts Institute</p>
-              <p className="text-xl">Computer Technology</p>
-              <p className="text-base">Session-2020-2021</p>
+              <p className="text-xl">Computer Technology (2020-2024)</p>
               <p className="text-base">Passing Year- 2024</p>
-              <p className="text-base">CGPA-3.69</p>
+              <p className="text-xs">CGPA-3.69</p>
             </div>
           </motion.div>
           <div>
@@ -36,7 +35,7 @@ const Educations = () => {
                 <p className="text-xl">Baniajan Di-mukhi High School</p>
                 <p className="text-xl">Group-Science</p>
                 <p className="text-base">Passing Year- 2020</p>
-                <p className="text-base">GPA-4.41</p>
+                <p className="text-xs">GPA-4.41</p>
               </motion.div>
             </p>
           </div>

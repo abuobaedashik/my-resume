@@ -63,7 +63,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar max-w-[1920px] z-10 bg-opacity-30 fixed bg-[#111723] px-4 sm:px-32 text-[#ffffff]">
+      <div className="navbar max-w-[1920px] z-10 bg-opacity-30 fixed bg-[#111723] px-4 sm:px-44 md:px-52 text-[#ffffff]">
         <div className="navbar-start">
           <div className="dropdown">
              
@@ -90,7 +90,7 @@ const Navbar = () => {
               {link}
             </ul>
           </div>
-          <a className=""><img src={logo} className="w-24 h-24" /></a>
+          <div className="text-xl font-bold font-nunito">Abu Obaed</div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
