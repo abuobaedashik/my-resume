@@ -8,6 +8,7 @@ import { FaFacebook, FaGithub, FaLinkedin, FaTwitch } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 
 const HeroSec = () => {
@@ -30,19 +31,19 @@ const HeroSec = () => {
           Developer by Passion, Designer at Heart
         </p>
         <div className="social-icons flex items-center justify-start gap-3 text-3xl text-[#4040d3] ">
-          <a href="#" className="h-[28px] w-[28px]">
-            <img src={facebook} alt="" />
-          </a>
-          <a href="#" className="h-[28px] w-[28px]">
-            <img src={linkedin} alt="" />
-          </a>
-          <a href="#">
-            <img src={twiter} alt="" className="h-[28px] w-[28px]" />
-          </a>
-          <a href="#" className="text-[25px]">
-            <FaGithub></FaGithub>
-          </a>
-        </div>
+            <NavLink to={'https://www.facebook.com/abu.obaed.90'} target="_blank" className="h-[28px] w-[28px]">
+              <img src={facebook} alt="" />
+            </NavLink>
+            <NavLink to={'https://www.linkedin.com/in/abu-obaed-ashik-junior-web-developer-00a5b0230/'} target="_blank" className="h-[28px] w-[28px]">
+              <img src={linkedin} alt="" />
+            </NavLink>
+            <NavLink to={'https://x.com/AAshik44029'} target="_blank">
+              <img src={twiter} alt="" className="h-[28px] w-[28px]" />
+            </NavLink>
+            <NavLink to={'https://github.com/abuobaedashik'} target="_blank" className="text-[25px]">
+              <FaGithub></FaGithub>
+            </NavLink>
+          </div>
 
         <div className="mt-8">
           <a

@@ -1,6 +1,7 @@
 import About from "../Component/About";
 import Contact from "../Component/Contact";
 import Educations from "../Component/Educations";
+import Footer from "../Component/Footer";
 import HeroSec from "../Component/HeroSec";
 import Navbar from "../Component/Navbar";
 import Projects from "../Component/Projects";
@@ -35,6 +36,10 @@ const HomeLayout = () => {
            {/* contact */}
            <div className="w-10/12 mx-auto mt-24 pb-12">
               <Contact></Contact>
+           </div>
+           {/* contact */}
+           <div className="w-full mx-auto mt-24 ">
+              <Footer></Footer>
            </div>
           
         </div>
