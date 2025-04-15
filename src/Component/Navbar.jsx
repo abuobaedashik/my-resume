@@ -79,10 +79,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar max-w-[1920px] z-50 bg-opacity-30 fixed bg-[#111723] px-4 sm:px-44 md:px-52 text-[#ffffff]">
-        <div className="navbar-start">
+      <div className="navbar max-w-[1920px] z-50 bg-opacity-30 fixed bg-[#111723] px-2 sm:px-44 md:px-52 text-[#ffffff]">
+        <div className="navbar-start ">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost  lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -105,16 +105,20 @@ const Navbar = () => {
               {link}
             </ul>
           </div>
-          <div className="text-xl flex items-center gap-2  font-bold font-nunito">
-            <img src={icon} alt="obaed" className="w-8 h-8" />
+          <div className="md:text-xl text-base flex items-center gap-2  font-bold font-nunito">
+            <img src={icon} alt="obaed" className="w-8 h-8 hidden sm:flex" />
             <p> Abu Obaed</p>
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1">{link}</ul>
         </div>
         <div className="navbar-end">
-          <a className="px-3 py-2 border-1 bg-[#FE9307] text-[#ffffff] rounded-xl  hover:bg-[#fe9307cc]">
+          <a
+            href="https://drive.google.com/file/d/1eHmUlWQLhpXStM2416gEN5yJ5DDZcmKt/view?usp=sharing"
+            target="_blank"
+             download={"https://drive.google.com/file/d/1eHmUlWQLhpXStM2416gEN5yJ5DDZcmKt/view?usp=sharing"}
+           className="md:px-3 px-1 py-1 md:py-2 border-1 bg-[#FE9307] text-[#ffffff] rounded-xl  hover:bg-[#fe9307cc]">
             Download Resume
           </a>
         </div>
