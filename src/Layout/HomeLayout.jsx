@@ -14,27 +14,27 @@ const HomeLayout = () => {
               <Navbar></Navbar>
            </div>
            {/* hero section */}
-           <div className="w-10/12 mx-auto">
+           <div name="home" className="w-10/12 mx-auto">
               <HeroSec></HeroSec>
            </div>
            {/* about me */}
-           <div className="w-10/12 mx-auto mt-24">
+           <div   name="about" className="w-10/12 mx-auto mt-24">
                <About></About>
            </div>
            {/* skill*/}
-           <div className="w-10/12 mx-auto mt-28 pb-12">
+           <div name="skill" className="w-10/12 mx-auto mt-28 pb-12">
               <Skill></Skill>
            </div>
            {/* educations */}
-           <div className="w-10/12 mx-auto mt-24 pb-12">
+           <div name="education" className="w-10/12 mx-auto mt-24 pb-12">
               <Educations></Educations>
            </div>
            {/* projects */}
-           <div className="w-10/12 mx-auto mt-24 pb-12">
+           <div name="projects" className="w-10/12 mx-auto mt-24 pb-12">
               <Projects></Projects>
            </div>
            {/* contact */}
-           <div className="w-10/12 mx-auto mt-24 pb-12">
+           <div name="contact" className="w-10/12 mx-auto mt-24 pb-12">
               <Contact></Contact>
            </div>
            {/* contact */}

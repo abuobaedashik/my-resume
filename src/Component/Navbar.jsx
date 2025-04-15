@@ -2,60 +2,78 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/Logo/logoObaed.png";
 import icon from "../../src/assets/Image/web/foot32.png";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const link = (
     <>
-      <NavLink
-        className={({ isActive }) =>
-          isActive
-            ? "px-3  text-xl text-[#FE9307] font-medium flex gap-1 items-center"
-            : " flex gap-1 items-center text-xl font-medium px-3"
-        }
-        to="/"
+      <Link
+        to="home"
+        spy={true} 
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="text-[#FE9307]"
+        className="px-3 text-xl font-medium flex gap-1 cursor-pointer items-center"
       >
         Home
-      </NavLink>
-      <NavLink
-        className={({ isActive }) =>
-          isActive
-            ? "px-3  text-xl text-[#FE9307] font-medium flex gap-1 items-center"
-            : " flex gap-1 items-center text-xl font-medium px-3"
-        }
-        to="/"
+      </Link>
+
+      <Link
+        to="about"
+        spy={true} 
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="text-[#FE9307]"
+        className="px-3 text-xl font-medium flex gap-1 cursor-pointer items-center"
       >
-        About Us
-      </NavLink>
-      <NavLink
-        className={({ isActive }) =>
-          isActive
-            ? "px-3  text-xl text-[#FE9307] font-medium flex gap-1 items-center"
-            : " flex gap-1 items-center text-xl font-medium px-3"
-        }
-        to="/"
-      >
-        Educations
-      </NavLink>
-      <NavLink
-        className={({ isActive }) =>
-          isActive
-            ? "px-3  text-xl text-[#FE9307] font-medium flex gap-1 items-center"
-            : " flex gap-1 items-center text-xl font-medium px-3"
-        }
-        to="/"
+        About Me
+      </Link>
+      <Link
+        to="skill"
+        spy={true} 
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="text-[#FE9307]"
+        className="px-3 text-xl font-medium flex gap-1 cursor-pointer items-center"
       >
         Skills
-      </NavLink>
-      <NavLink
-        className={({ isActive }) =>
-          isActive
-            ? "px-3  text-xl text-[#FE9307] font-medium flex gap-1 items-center"
-            : " flex gap-1 items-center text-xl font-medium px-3"
-        }
-        to="/"
+      </Link>
+      <Link
+        to="education"
+        spy={true} 
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="text-[#FE9307]"
+        className="px-3 text-xl font-medium flex gap-1 cursor-pointer items-center"
+      >
+        Educations
+      </Link>
+      <Link
+        to="projects"
+        spy={true} 
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="text-[#FE9307]"
+        className="px-3 text-xl font-medium flex gap-1 cursor-pointer items-center"
+      >
+        Projects
+      </Link>
+      <Link
+        to="contact"
+        spy={true} 
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="text-[#FE9307]"
+        className="px-3 text-xl font-medium flex gap-1 cursor-pointer items-center"
       >
         Contact
-      </NavLink>
+      </Link>
     </>
   );
 

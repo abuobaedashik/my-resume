@@ -1,107 +1,94 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
+import { FaRegPaperPlane } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
-    .sendForm("service_j6334sl", "template_07qaumb", form.current, {
-      publicKey: "jmuhkAlJJzBd2ZqeO",
-    })
-    .then(
-      () => {
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Your message has been sent!",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-      },
-      (error) => {
-        console.error("FAILED...", error.text);
-      }
-    );
-  
+      .sendForm("service_j6334sl", "template_07qaumb", form.current, {
+        publicKey: "jmuhkAlJJzBd2ZqeO",
+      })
+      .then(
+        () => {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Your message has been sent!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        },
+        (error) => {
+          console.error("FAILED...", error.text);
+        }
+      );
   };
+
   return (
-    <div>
-      <div className="mx-auto w-11/12 text-[#ffffff]">
-        <div className="text-5xl font-bold mb-16 text-center">Contact</div>
-        <div className="mt-5 flex items-center justify-between sm:flex-row flex-col gap-4">
-          {/* email */}
-          <div className="email text-base text-[#131313] sm:w-[45%]">
-
-            <div className="flex items-center justify-center">
-              <div className="bg-gradient-to-r from-pink-500 to-purple-500 p-[2px] rounded-xl">
-                <div className="bg-[#0a0213] p-6  rounded-xl">
-                  <h2 className="text-white text-xl font-semibold mb-4">
-                    Contact Us
-                  </h2>
-
-                  <form ref={form} onSubmit={sendEmail} className="space-y-2">
-                    <div>
-                      <label className="text-gray-300 block mb-1">Name</label>
-                      <input
-                        type="name"
-                        placeholder="Enter your Name"
-                        name="user_name"
-                        className="w-full bg-black text-white p-3  rounded-lg border-none outline-none focus:ring-2 focus:ring-pink-500"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-gray-300 block mb-1">Email</label>
-                      <input
-                        type="email"
-                        placeholder="Enter your email"
-                        name="user_email" 
-                        className="w-full bg-black text-white p-3 rounded-lg border-none outline-none focus:ring-2 focus:ring-pink-500"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="text-gray-300 block mb-1">
-                        Message
-                      </label>
-                      <textarea
-                        rows="4"
-                        name="message"
-                        placeholder="Enter your message"
-                        className="w-full bg-black text-white p-3 rounded-lg border-none outline-none focus:ring-2 focus:ring-pink-500"
-                      />
-                    </div>
-
-                    <button className="flex items-center justify-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-5 py-3 rounded-lg font-semibold shadow-lg hover:opacity-80 transition">
-                      Send <span className="ml-2">🚀</span>
-                    </button>
-                  </form>
-
-                </div>
+    <div className=" py-20 text-white" id="contact">
+      <div className="w-11/12 max-w-6xl mx-auto">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-12">Get In Touch</h2>
+        <div className="flex flex-col sm:flex-row gap-12">
+          {/* Contact Form */}
+          <div className="sm:w-1/2 w-full bg-[#131313] p-8 rounded-xl shadow-lg">
+            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+            <form ref={form} onSubmit={sendEmail} className="space-y-5">
+              <div>
+                <label className="block mb-1">Name</label>
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder="Your Name"
+                  className="w-full p-3 rounded-lg bg-black border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                />
               </div>
-            </div>
+              <div>
+                <label className="block mb-1">Email</label>
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="you@example.com"
+                  className="w-full p-3 rounded-lg bg-black border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                />
+              </div>
+              <div>
+                <label className="block mb-1">Message</label>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Write your message here..."
+                  className="w-full p-3 rounded-lg bg-black border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                ></textarea>
+              </div>
+              <button className="flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-purple-600 w-full py-3 rounded-lg font-semibold hover:opacity-90 transition">
+                Send Message <FaRegPaperPlane className="text-xl" />
+              </button>
+            </form>
           </div>
-          {/* contact info */}
-          <div className="email text-base space-y-2 sm:w-[45%]">
-            <div className="text-xl font-bold">
-              Let's Create Something Amazing Together!
+
+          {/* Contact Info */}
+          <div className="sm:w-1/2 w-full space-y-4 flex flex-col justify-center">
+            <h3 className="text-3xl font-semibold">Let’s build something great!</h3>
+            <p className="text-gray-300">
+              Whether you have a question, a project idea, or just want to say hello — I’d love to hear from you.
+            </p>
+
+            <div className="flex items-center gap-3 text-lg">
+              <MdLocationOn className="text-pink-500 text-2xl" />
+              <span className="text-gray-300">Mohammadpur, Dhaka, Bangladesh</span>
             </div>
-            <div className="text-base font-normal ">
-              Thanks for stopping by! If you have any questions, ideas, or
-              simply want to collaborate, feel free to reach out. Use the
-              contact details below or fill out the quick form to send me a
-              message directly. I'm excited to connect and create something
-              amazing together!
+            <div className="flex items-center gap-3 text-lg">
+              <MdPhone className="text-pink-500 text-2xl" />
+              <span className="text-gray-300">+880 1765 262296</span>
             </div>
-            <div className="text-lg font-normal ">contact</div>
-            <div className="text-lg font-normal ">
-              Mohammadpur, Dhaka , Bangladesh
-            </div>
-            <div className="text-lg font-normal ">phone: +8801765262296</div>
-            <div className="text-lg font-normal ">
-              email: abuobaedashik@gmail.com
+            <div className="flex items-center gap-3 text-lg">
+              <MdEmail className="text-pink-500 text-2xl" />
+              <span className="text-gray-300">abuobaedashik@gmail.com</span>
             </div>
           </div>
         </div>
